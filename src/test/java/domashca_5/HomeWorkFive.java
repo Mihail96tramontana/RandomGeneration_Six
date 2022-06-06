@@ -21,6 +21,8 @@ public class HomeWorkFive {
         Configuration.browserSize = "1920x1080";
     }
 
+    PageObject PageObject = PageObject;
+
     @Test
     void successfulTest() {
         String firstname = "Mihail";
@@ -30,33 +32,33 @@ public class HomeWorkFive {
         String currentAddress = "Miami";
         String Male = "Male";
         String Music = "Music";
+        String uploadPicture = "uploadPicture";
+        String react-select-3-input = "react-select-3-input";
 
-
-        open("/automation-practice-form");
-        executeJavaScript("$('footer').remove()");
-        executeJavaScript("$('#fixedban').remove()");
+        PageObject.openPage();
 
         //шаги
-        new PageObject().setFirstName(firstname);
-        new PageObject().lastName(lastname);
-        new PageObject().userEmail(userEmail);
-        new PageObject().userNumber(userNumber);
-        new PageObject().currentAddress(currentAddress);
+        PageObject.openPage()
+        .setFirstName(firstname)
+        .lastName(lastname)
+        .userEmail(userEmail)
+        .userNumber(userNumber)
+        .currentAddress(currentAddress);
         //$("#currentAddress").setValue("Miami"); из чего получили более лаконичную конструкцию
-        new PageObject().Male(Male);
-        new PageObject().Music(Music);
+        .Male(Male);
+        .Music(Music);
         $(byText("Music")).click(); //из чего получили более лаконичную конструкцию
         //(календарь)
-        $("#dateOfBirthInput").click();
-        $(".react-datepicker__month-select").click();
-        $(byText("April")).click();
-        $(".react-datepicker__year-select").click();
-        $(byText("2020")).click();
-        $(byText("10")).click();
+        PageObject.dateOfBirth("10", "April", "2020" );
         //(календарь)
-        $("#uploadPicture").uploadFile(new File("src/test/resources/1.jpg")); // загрузка файла
+        .uploadPicture(uploadPicture);
+
+        //subjectsInput
         $("#subjectsInput").sendKeys("m");
         $(byText("Maths")).pressEnter();
+        //subjectsInput
+
+        PageObject.react-select-3-input(react-select-3-input);
         $("#react-select-3-input").val("NCR").pressEnter();
         $("#react-select-4-input").val("Noida").pressEnter();
         $("#submit").click();

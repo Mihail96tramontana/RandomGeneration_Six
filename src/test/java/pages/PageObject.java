@@ -1,33 +1,74 @@
 package pages;
 
+import pages.component.CalendarComponent;
+
+import java.io.File;
+
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class PageObject {
-}
 
-    public void setFirstName(String value) { //дополнительная конструкция
-        $("#firstName").setValue(value); //копия конструкции с локатором
+CalendarComponent CalendarComponent = new CalendarComponent();
+
+    public PageObject openPage() {
+        open("/automation-practice-form");
+        executeJavaScript("$('footer').remove()");
+        executeJavaScript("$('#fixedban').remove()");
+
+        return this;
     }
 
-    public void lastName(String value) {
+    public PageObject setFirstName (String value) { //дополнительная конструкция
+        $("#firstName").setValue(value); //копия конструкции с локатором
+
+        return this;
+    }
+
+    public PageObject lastName (String value) {
         $("#lastName").setValue(value);
 
+        return this;
     }
 
-    public void userEmail (String value) {
+    public PageObject userEmail (String value) {
         $("#userEmail").setValue(value);
+
+        return this;
     }
-    public void userNumber (String value) {
+    public PageObject userNumber (String value) {
         $("#userNumber").setValue(value);
+
+        return this;
     }
-    public void currentAddress (String value) {
+    public PageObject currentAddress (String value) {
         $("#currentAddress").setValue(value);
+
+        return this;
     }
-    public void Male (String value) {
+    public PageObject Male (String value) {
         $(byText("Male")).click();
+
+        return this;
     }
-    public void Music (String value) {
+    public PageObject Music (String value) {
         $(byText("Music")).click();
+
+        return this;
+    }
+    public PageObject uploadPicture (String value) {
+        $("#uploadPicture").uploadFile(new File("src/test/resources/1.jpg")); // загрузка файла
+
+        return this;
+    }
+    public PageObject react-select-3-input (String value) {
+        $("#react-select-3-input").val("NCR").pressEnter();
+    }
+    public PageObject dateOfBirth (String day, String month, String year) {
+        $("#dateOfBirthInput").click();
+        CalendarComponent.setDate(day, month, year);
+
+        return this;
     }
 }
