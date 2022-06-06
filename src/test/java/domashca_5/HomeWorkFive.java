@@ -25,15 +25,16 @@ public class HomeWorkFive {
 
     @Test
     void successfulTest() {
-        String firstname = "Mihail";
-        String lastname = "Lubeznow";
-        String userEmail = "mihail@mail.ru";
-        String userNumber = "1234567890";
-        String currentAddress = "Miami";
-        String Male = "Male";
-        String Music = "Music";
-        String uploadPicture = "uploadPicture";
-        String react-select-3-input = "react-select-3-input";
+        //объявление переменных
+        String firstname = "Mihail",
+                lastname = "Lubeznow",
+                userEmail = "mihail@mail.ru",
+                userNumber = "1234567890",
+                currentAddress = "Miami",
+                Male = "Male",
+                Music = "Music",
+                uploadPicture = "uploadPicture",
+        react-select-3-input = "react-select-3-input";
 
         PageObject.openPage();
 

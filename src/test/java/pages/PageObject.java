@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 public class PageObject {
 
 public  CalendarComponent CalendarComponent = new CalendarComponent();
-public ResultsTableComponent ResultsTableComponent = new ResultsTableComponent();
+public ResultsTableComponent resultsTableComponent = new ResultsTableComponent();
 
 
     public PageObject openPage() {
