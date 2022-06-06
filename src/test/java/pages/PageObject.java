@@ -1,6 +1,7 @@
 package pages;
 
 import pages.component.CalendarComponent;
+import pages.component.ResultsTableComponent;
 
 import java.io.File;
 
@@ -10,7 +11,9 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class PageObject {
 
-CalendarComponent CalendarComponent = new CalendarComponent();
+public  CalendarComponent CalendarComponent = new CalendarComponent();
+public ResultsTableComponent ResultsTableComponent = new ResultsTableComponent();
+
 
     public PageObject openPage() {
         open("/automation-practice-form");
