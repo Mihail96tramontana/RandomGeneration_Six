@@ -54,9 +54,11 @@ public class HomeWorkFive {
         //$(byText("Music")).click(); из чего получили более лаконичную конструкцию
         .dateOfBirth("10", "April", "2020" )
         .uploadPicture(uploadPicture)
+
         .setSubjectValue(setSubjectValu)
         //$("#subjectsInput").sendKeys("m")
        // $(byText("Maths")).pressEnter()
+
         .setSelectState(setSelectState)
         .setSelectCity(setSelectCity)
         .setSubmit(setSubmit);

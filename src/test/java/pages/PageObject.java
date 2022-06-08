@@ -63,20 +63,20 @@ public
         $(byText("Maths")).pressEnter();
         return this;
     }
-    public PageObject dateOfBirth (String day, String month, String year) {
+    public PageObject dateOfBirth(String day, String month, String year) {
         $("#dateOfBirthInput").click();
         calendarComponent.setDate(day, month, year);
         return this;
     }
-    public PageObject setSelectState (String value) {
+    public PageObject setSelectState(String value) {
         $("#setSelectState").val("NCR").pressEnter();
         return this;
     }
-    public PageObject setSelectCity (String value) {
+    public PageObject setSelectCity(String value) {
         $("#setSelectCity").val("Noida").pressEnter();
         return this;
     }
-    public PageObject setSubmit (String value) {
+    public PageObject setSubmit(String value) {
         $("#setSubmit").click();
     }
 }
