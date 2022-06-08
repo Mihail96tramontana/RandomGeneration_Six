@@ -34,7 +34,10 @@ public class HomeWorkFive {
                 Male = "Male",
                 Music = "Music",
                 uploadPicture = "uploadPicture",
-        react-select-3-input = "react-select-3-input";
+                setSelectState = "setSelectState",
+                setSelectCity = "setSelectCity",
+                setSubmit = "setSubmit";
+
 
         PageObject.openPage();
 
@@ -44,25 +47,19 @@ public class HomeWorkFive {
         .lastName(lastname)
         .userEmail(userEmail)
         .userNumber(userNumber)
-        .currentAddress(currentAddress);
+        .currentAddress(currentAddress)
         //$("#currentAddress").setValue("Miami"); из чего получили более лаконичную конструкцию
-        .Male(Male);
-        .Music(Music);
-        $(byText("Music")).click(); //из чего получили более лаконичную конструкцию
-        //(календарь)
-        PageObject.dateOfBirth("10", "April", "2020" );
-        //(календарь)
-        .uploadPicture(uploadPicture);
-
-        //subjectsInput
-        $("#subjectsInput").sendKeys("m");
-        $(byText("Maths")).pressEnter();
-        //subjectsInput
-
-        PageObject.react-select-3-input(react-select-3-input);
-        $("#react-select-3-input").val("NCR").pressEnter();
-        $("#react-select-4-input").val("Noida").pressEnter();
-        $("#submit").click();
+        .Male(Male)
+        .Music(Music)
+        //$(byText("Music")).click(); из чего получили более лаконичную конструкцию
+        .dateOfBirth("10", "April", "2020" )
+        .uploadPicture(uploadPicture)
+        .setSubjectValue(setSubjectValu)
+        //$("#subjectsInput").sendKeys("m")
+       // $(byText("Maths")).pressEnter()
+        .setSelectState(setSelectState)
+        .setSelectCity(setSelectCity)
+        .setSubmit(setSubmit);
 
         //проверки
         $(".modal-content").shouldHave(text("Mihail Lubeznow"),
