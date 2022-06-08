@@ -2,6 +2,7 @@ package pages;
 
 import pages.component.CalendarComponent;
 import pages.component.ResultsTableComponent;
+import pages.componentsabject.SubjectComponent;
 
 import java.io.File;
 
@@ -13,7 +14,7 @@ public class PageObject {
 
 public  CalendarComponent calendarComponent = new CalendarComponent();
 public ResultsTableComponent resultsTableComponent = new ResultsTableComponent();
-public
+public SubjectComponent subjectComponent = new SubjectComponent();
 
 
     public PageObject openPage() {
@@ -60,7 +61,7 @@ public
     }
     public PageObject setSubjectValue(String value) {
         $("#setSubjectValue").val("NCR").pressEnter();
-        $(byText("Maths")).pressEnter();
+        subjectComponent.subjectComponent("Maths");
         return this;
     }
     public PageObject dateOfBirth(String day, String month, String year) {

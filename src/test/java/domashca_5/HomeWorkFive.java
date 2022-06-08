@@ -36,7 +36,8 @@ public class HomeWorkFive {
                 uploadPicture = "uploadPicture",
                 setSelectState = "setSelectState",
                 setSelectCity = "setSelectCity",
-                setSubmit = "setSubmit";
+                setSubmit = "setSubmit",
+                setSubjectValue = "setSubjectValue";
 
 
         PageObject.openPage();
@@ -54,11 +55,7 @@ public class HomeWorkFive {
         //$(byText("Music")).click(); из чего получили более лаконичную конструкцию
         .dateOfBirth("10", "April", "2020" )
         .uploadPicture(uploadPicture)
-
-        .setSubjectValue(setSubjectValu)
-        //$("#subjectsInput").sendKeys("m")
-       // $(byText("Maths")).pressEnter()
-
+        .setSubjectValue(setSubjectValue)
         .setSelectState(setSelectState)
         .setSelectCity(setSelectCity)
         .setSubmit(setSubmit);
