@@ -12,9 +12,9 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class PageObject {
 
-public  CalendarComponent calendarComponent = new CalendarComponent();
-public ResultsTableComponent resultsTableComponent = new ResultsTableComponent();
-public SubjectComponent subjectComponent = new SubjectComponent();
+    public CalendarComponent calendarComponent = new CalendarComponent();
+    public ResultsTableComponent resultsTableComponent = new ResultsTableComponent();
+    public SubjectComponent subjectComponent = new SubjectComponent();
 
 
     public PageObject openPage() {
@@ -39,45 +39,61 @@ public SubjectComponent subjectComponent = new SubjectComponent();
         $("#userEmail").setValue(value);
         return this;
     }
+
     public PageObject userNumber(String value) {
         $("#userNumber").setValue(value);
         return this;
     }
+
     public PageObject currentAddress(String value) {
         $("#currentAddress").setValue(value);
         return this;
     }
+
     public PageObject Male(String value) {
         $(byText("Male")).click();
         return this;
     }
+
     public PageObject Music(String value) {
         $(byText("Music")).click();
         return this;
     }
+
     public PageObject uploadPicture(String value) {
         $("#uploadPicture").uploadFile(new File("src/test/resources/1.jpg")); // загрузка файла
         return this;
     }
+
     public PageObject setSubjectValue(String value) {
         $("#setSubjectValue").val("NCR").pressEnter();
         subjectComponent.subjectComponent("Maths");
         return this;
     }
+
     public PageObject dateOfBirth(String day, String month, String year) {
         $("#dateOfBirthInput").click();
         calendarComponent.setDate(day, month, year);
         return this;
     }
+
     public PageObject setSelectState(String value) {
         $("#setSelectState").val("NCR").pressEnter();
         return this;
     }
+
     public PageObject setSelectCity(String value) {
         $("#setSelectCity").val("Noida").pressEnter();
         return this;
     }
+
     public PageObject setSubmit(String value) {
         $("#setSubmit").click();
+        return this;
+    }
+
+    public PageObject checkResult(String key, String value) {
+        ResultsTableComponent.checkResult(key, value);
+        return this;
     }
 }

@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 
 public class HomeWorkFive {
-}
+
 
     @BeforeAll
     static void beforeAll() {
@@ -21,7 +21,7 @@ public class HomeWorkFive {
         Configuration.browserSize = "1920x1080";
     }
 
-    PageObject PageObject = PageObject;
+    PageObject PageObject = new PageObject();
 
     @Test
     void successfulTest() {
@@ -60,17 +60,19 @@ public class HomeWorkFive {
         .setSelectCity(setSelectCity)
         .setSubmit(setSubmit);
 
+
         //проверки
-        $(".modal-content").shouldHave(text("Mihail Lubeznow"),
-                text("mihail@mail.ru"),
-                text("Male"),
-                text("1234567890"),
-                text("10 April,2020"),
-                text("Maths"),
-                text("Music"),
-                text("1.jpg"),
-                text("Miami"),
-                text("NCR Noida"));
+        PageObject
+                .checkResult("Student Name", firstname + "Mihail Lubeznow" + lastname)
+                .checkResult("Student Email", "mihail@mail.ru")
+                .checkResult("Gender", "Male")
+                .checkResult("Mobile", "1234567890")
+                .checkResult("Date of Birth", "10 April,2020")
+                .checkResult("Subjects", "Maths")
+                .checkResult("Hobbies", "Music")
+                .checkResult("Picture", "1.jpg")
+                .checkResult("Address", "Miami")
+                .checkResult("State and City", "NCR Noida");
     }
 }
 
