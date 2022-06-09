@@ -3,13 +3,8 @@ package domashca_5;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import pages.PageObject;
+import pages.RegistrationFormPage;
 
-import java.io.File;
-
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 
 public class HomeWorkFive {
@@ -21,7 +16,7 @@ public class HomeWorkFive {
         Configuration.browserSize = "1920x1080";
     }
 
-    PageObject PageObject = new PageObject();
+    RegistrationFormPage RegistrationFormPage = new RegistrationFormPage();
 
     @Test
     void successfulTest() {
@@ -37,13 +32,13 @@ public class HomeWorkFive {
                 setSelectState = "setSelectState",
                 setSelectCity = "setSelectCity",
                 setSubmit = "setSubmit",
-                setSubjectValue = "setSubjectValue";
+                setSubjectValue = "Maths";
 
 
-        PageObject.openPage();
+        RegistrationFormPage.openPage();
 
         //шаги
-        PageObject.openPage()
+        RegistrationFormPage.openPage()
         .setFirstName(firstname)
         .lastName(lastname)
         .userEmail(userEmail)
@@ -58,19 +53,19 @@ public class HomeWorkFive {
         .setSubjectValue(setSubjectValue)
         .setSelectState(setSelectState)
         .setSelectCity(setSelectCity)
-        .setSubmit(setSubmit);
+        .setSubmit();
 
 
         //проверки
-        PageObject
-                .checkResult("Student Name", firstname + "Mihail Lubeznow" + lastname)
-                .checkResult("Student Email", "mihail@mail.ru")
+        RegistrationFormPage
+                .checkResult("Student Name", "Student Name " + firstname + " " + lastname)
+                .checkResult("Student Email", userEmail)
                 .checkResult("Gender", "Male")
                 .checkResult("Mobile", "1234567890")
                 .checkResult("Date of Birth", "10 April,2020")
                 .checkResult("Subjects", "Maths")
                 .checkResult("Hobbies", "Music")
-                .checkResult("Picture", "1.jpg")
+                .checkResult("Picture", "2.jpg")
                 .checkResult("Address", "Miami")
                 .checkResult("State and City", "NCR Noida");
     }
