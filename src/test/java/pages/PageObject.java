@@ -21,7 +21,6 @@ public class PageObject {
         open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
-
         return this;
     }
 
@@ -61,12 +60,12 @@ public class PageObject {
     }
 
     public PageObject uploadPicture(String value) {
-        $("#uploadPicture").uploadFile(new File("src/test/resources/1.jpg")); // загрузка файла
+        $("#uploadPicture").uploadFile(new File("src/test/resources/img/2.jpg")); // загрузка файла
         return this;
     }
 
     public PageObject setSubjectValue(String value) {
-        $("#setSubjectValue").val("NCR").pressEnter();
+        $("#subjectsInput").pressEnter();
         subjectComponent.subjectComponent("Maths");
         return this;
     }
@@ -78,12 +77,12 @@ public class PageObject {
     }
 
     public PageObject setSelectState(String value) {
-        $("#setSelectState").val("NCR").pressEnter();
+        $("#react-select-3-input").val("NCR").pressEnter();
         return this;
     }
 
     public PageObject setSelectCity(String value) {
-        $("#setSelectCity").val("Noida").pressEnter();
+        $("#react-select-4-input").val("Noida").pressEnter();
         return this;
     }
 
