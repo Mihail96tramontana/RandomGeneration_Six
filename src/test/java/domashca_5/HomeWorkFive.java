@@ -29,10 +29,11 @@ public class HomeWorkFive {
                 Male = "Male",
                 Music = "Music",
                 uploadPicture = "2.jpg",
-                setSelectState = "react-select-3-input",
-                setSelectCity = "react-select-4-input",
+                setSelectState = "NCR",
+                setSelectCity = "Noida",
                 setSubmit = "Submit",
-                setSubjectValue = "Maths";
+                setSubjectValue = "Maths",
+                dateOfBirth = "dateOfBirthInput";
 
 
         RegistrationFormPage.openPage();
