@@ -33,7 +33,7 @@ public class HomeWorkFive {
                 setSelectCity = "Noida",
                 setSubmit = "Submit",
                 setSubjectValue = "Maths",
-                dateOfBirth = "dateOfBirthInput";
+                dateOfBirth = "10 April,2020";
 
 
         RegistrationFormPage.openPage();
@@ -59,11 +59,11 @@ public class HomeWorkFive {
 
         //проверки
         RegistrationFormPage
-                .checkResult("Student Name", "Student Name " + firstname + " " + lastname)
+                .checkResult("Student Name", firstname + " " + lastname)
                 .checkResult("Student Email", userEmail)
                 .checkResult("Gender", Male)
                 .checkResult("Mobile", userNumber)
-                .checkResult("Date of Birth", "10 April,2020")
+                .checkResult("Date of Birth", dateOfBirth)
                 .checkResult("Subjects", setSubjectValue)
                 .checkResult("Hobbies", Music)
                 .checkResult("Picture", uploadPicture)
