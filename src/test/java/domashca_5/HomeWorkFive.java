@@ -28,10 +28,10 @@ public class HomeWorkFive {
                 currentAddress = "Miami",
                 Male = "Male",
                 Music = "Music",
-                uploadPicture = "uploadPicture",
-                setSelectState = "setSelectState",
-                setSelectCity = "setSelectCity",
-                setSubmit = "setSubmit",
+                uploadPicture = "2.jpg",
+                setSelectState = "react-select-3-input",
+                setSelectCity = "react-select-4-input",
+                setSubmit = "Submit",
                 setSubjectValue = "Maths";
 
 
@@ -60,14 +60,14 @@ public class HomeWorkFive {
         RegistrationFormPage
                 .checkResult("Student Name", "Student Name " + firstname + " " + lastname)
                 .checkResult("Student Email", userEmail)
-                .checkResult("Gender", "Male")
-                .checkResult("Mobile", "1234567890")
+                .checkResult("Gender", Male)
+                .checkResult("Mobile", userNumber)
                 .checkResult("Date of Birth", "10 April,2020")
-                .checkResult("Subjects", "Maths")
-                .checkResult("Hobbies", "Music")
-                .checkResult("Picture", "2.jpg")
-                .checkResult("Address", "Miami")
-                .checkResult("State and City", "NCR Noida");
+                .checkResult("Subjects", setSubjectValue)
+                .checkResult("Hobbies", Music)
+                .checkResult("Picture", uploadPicture)
+                .checkResult("Address", currentAddress)
+                .checkResult("State and City", setSelectState + " " + setSelectCity);
     }
 }
 
