@@ -36,7 +36,7 @@ public class HomeWorkFive {
                 dateOfBirth = "10 April,2020";
 
 
-        RegistrationFormPage.openPage();
+        RegistrationFormPage.openPage();вымиыиыв
 
         //шаги
         RegistrationFormPage.openPage()
