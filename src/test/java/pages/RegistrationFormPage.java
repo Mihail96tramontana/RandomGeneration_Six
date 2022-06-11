@@ -49,12 +49,12 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage Male(String value) {
+    public RegistrationFormPage setMale(String value) {
         $(byText("Male")).click();
         return this;
     }
 
-    public RegistrationFormPage Music(String value) {
+    public RegistrationFormPage setMusic(String value) {
         $(byText("Music")).click();
         return this;
     }

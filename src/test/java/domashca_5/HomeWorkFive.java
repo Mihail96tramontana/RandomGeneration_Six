@@ -26,8 +26,8 @@ public class HomeWorkFive {
                 userEmail = "mihail@mail.ru",
                 userNumber = "1234567890",
                 currentAddress = "Miami",
-                Male = "Male",
-                Music = "Music",
+                setMale = "Male",
+                setMusic = "Music",
                 uploadPicture = "2.jpg",
                 setSelectState = "NCR",
                 setSelectCity = "Noida",
@@ -46,8 +46,8 @@ public class HomeWorkFive {
         .userNumber(userNumber)
         .currentAddress(currentAddress)
         //$("#currentAddress").setValue("Miami"); из чего получили более лаконичную конструкцию
-        .Male(Male)
-        .Music(Music)
+        .setMale(setMale)
+        .setMusic(setMusic)
         //$(byText("Music")).click(); из чего получили более лаконичную конструкцию
         .dateOfBirth("10", "April", "2020" )
         .uploadPicture(uploadPicture)
@@ -61,11 +61,11 @@ public class HomeWorkFive {
         RegistrationFormPage
                 .checkResult("Student Name", firstname + " " + lastname)
                 .checkResult("Student Email", userEmail)
-                .checkResult("Gender", Male)
+                .checkResult("Gender", setMale)
                 .checkResult("Mobile", userNumber)
                 .checkResult("Date of Birth", dateOfBirth)
                 .checkResult("Subjects", setSubjectValue)
-                .checkResult("Hobbies", Music)
+                .checkResult("Hobbies", setMusic)
                 .checkResult("Picture", uploadPicture)
                 .checkResult("Address", currentAddress)
                 .checkResult("State and City", setSelectState + " " + setSelectCity);
