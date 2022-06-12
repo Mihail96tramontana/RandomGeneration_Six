@@ -60,7 +60,7 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage uploadPicture(String value) {
-        $("#uploadPicture").uploadFile(new File(value)); // загрузка файла
+        $("#uploadPicture").uploadFile(new File("src/test/resources/img/"+value)); // загрузка файла
         return this;
     }
 
