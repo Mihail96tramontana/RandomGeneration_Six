@@ -1,8 +1,5 @@
 package pages.componentsabject;
 
-import com.codeborne.selenide.conditions.Value;
-
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class SubjectComponent {
