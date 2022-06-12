@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationFormPage;
 
-public class HomeWorkSix {
+public class HomeWorkFive {
 
 
     @BeforeAll
