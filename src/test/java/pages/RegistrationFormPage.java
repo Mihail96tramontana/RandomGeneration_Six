@@ -60,7 +60,7 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage uploadPicture(String value) {
-        $(value).uploadFile(new File("src/test/resources/img/2.jpg")); // загрузка файла
+        $("#uploadPicture").uploadFile(new File(value)); // загрузка файла
         return this;
     }
 
@@ -76,12 +76,12 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage selectState(String value) {
-        $(value).val("NCR").pressEnter();
+        $("#react-select-3-input").val(value).pressEnter();
         return this;
     }
 
     public RegistrationFormPage selectCity(String value) {
-        $(value).val("Noida").pressEnter();
+        $("#react-select-4-input").val(value).pressEnter();
         return this;
     }
 
