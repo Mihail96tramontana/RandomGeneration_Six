@@ -5,10 +5,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationFormPage;
 
-public class HomeWorkFive {
+public class HomeWorkSix {
 
 
-    @BeforeAllrervrrvr
+    @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
@@ -20,7 +20,7 @@ public class HomeWorkFive {
     @Test
     void successfulTest() {
         //объявление переменных
-        String firstName = "Mihail",
+        String firstname = "Mihail",
                 lastName = "Lubeznow",
                 userEmail = "mihail@mail.ru",
                 userNumber = "1234567890",
@@ -37,7 +37,7 @@ public class HomeWorkFive {
 
         //шаги
         registrationFormPage.openPage()
-        .setFirstName(firstName)
+        .setFirstName(firstname)
         .setLastName(lastName)
         .setUserEmail(userEmail)
         .setUserNumber(userNumber)
@@ -56,7 +56,7 @@ public class HomeWorkFive {
 
         //проверки
         registrationFormPage
-                .checkResult("Student Name", firstName + " " + lastName)
+                .checkResult("Student Name", firstname + " " + lastName)
                 .checkResult("Student Email", userEmail)
                 .checkResult("Gender", gender)
                 .checkResult("Mobile", userNumber)
