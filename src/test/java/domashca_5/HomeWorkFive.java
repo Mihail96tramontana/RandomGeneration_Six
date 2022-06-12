@@ -20,7 +20,7 @@ public class HomeWorkFive {
     void successfulTest() {
         //объявление переменных
         String setFirstName = "Mihail",
-                setLastname = "Lubeznow",
+                setLastName = "Lubeznow",
                 setUserEmail = "mihail@mail.ru",
                 setUserNumber = "1234567890",
                 currentAddress = "Miami",
@@ -30,12 +30,14 @@ public class HomeWorkFive {
                 selectState = "NCR",
                 selectCity = "Noida",
                 setSubjectValue = "Maths",
-                dateOfBirth = "10 April,2020";
+                day = "10",
+                month = "April",
+                year = "2020";
 
         //шаги
         registrationFormPage.openPage()
         .setFirstName(setFirstName)
-        .setLastName(setLastname)
+        .setLastName(setLastName)
         .setUserEmail(setUserEmail)
         .setUserNumber(setUserNumber)
         .currentAddress(currentAddress)
@@ -43,7 +45,7 @@ public class HomeWorkFive {
         .setGender(setGender)
         .setHobbies(setHobbies)
         //$(byText("Music")).click(); из чего получили более лаконичную конструкцию
-        .dateOfBirth(dateOfBirth)
+        .dateOfBirth(day, month, year)
         .uploadPicture(uploadPicture)
         .setSubjectValue(setSubjectValue)
         .selectState(selectState)
@@ -53,11 +55,11 @@ public class HomeWorkFive {
 
         //проверки
         registrationFormPage
-                .checkResult("Student Name", setFirstName + " " + setLastname)
+                .checkResult("Student Name", setFirstName + " " + setLastName)
                 .checkResult("Student Email", setUserEmail)
                 .checkResult("Gender", setGender)
                 .checkResult("Mobile", setUserNumber)
-                .checkResult("Date of Birth", dateOfBirth)
+                .checkResult("Date of Birth", day + " " + month + "," + year)
                 .checkResult("Subjects", setSubjectValue)
                 .checkResult("Hobbies", setHobbies)
                 .checkResult("Picture", uploadPicture)
