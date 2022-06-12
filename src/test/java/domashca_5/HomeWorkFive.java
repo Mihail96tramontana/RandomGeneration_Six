@@ -19,54 +19,50 @@ public class HomeWorkFive {
     @Test
     void successfulTest() {
         //объявление переменных
-        String firstname = "Mihail",
-                lastname = "Lubeznow",
-                userEmail = "mihail@mail.ru",
-                userNumber = "1234567890",
+        String setFirstName = "Mihail",
+                setLastname = "Lubeznow",
+                setUserEmail = "mihail@mail.ru",
+                setUserNumber = "1234567890",
                 currentAddress = "Miami",
-                setMale = "Male",
-                setMusic = "Music",
+                setGender = "Male",
+                setHobbies = "Music",
                 uploadPicture = "2.jpg",
-                setSelectState = "NCR",
-                setSelectCity = "Noida",
-                setSubmit = "Submit",
+                selectState = "NCR",
+                selectCity = "Noida",
                 setSubjectValue = "Maths",
                 dateOfBirth = "10 April,2020";
 
-
-        registrationFormPage.openPage();
-
         //шаги
         registrationFormPage.openPage()
-        .setFirstName(firstname)
-        .lastName(lastname)
-        .userEmail(userEmail)
-        .userNumber(userNumber)
+        .setFirstName(setFirstName)
+        .setLastName(setLastname)
+        .setUserEmail(setUserEmail)
+        .setUserNumber(setUserNumber)
         .currentAddress(currentAddress)
         //$("#currentAddress").setValue("Miami"); из чего получили более лаконичную конструкцию
-        .setMale(setMale)
-        .setMusic(setMusic)
+        .setGender(setGender)
+        .setHobbies(setHobbies)
         //$(byText("Music")).click(); из чего получили более лаконичную конструкцию
-        .dateOfBirth("10", "April", "2020" )
+        .dateOfBirth(dateOfBirth)
         .uploadPicture(uploadPicture)
         .setSubjectValue(setSubjectValue)
-        .setSelectState(setSelectState)
-        .setSelectCity(setSelectCity)
-        .setSubmit();
+        .selectState(selectState)
+        .selectCity(selectCity)
+        .clickSubmit();
 
 
         //проверки
         registrationFormPage
-                .checkResult("Student Name", firstname + " " + lastname)
-                .checkResult("Student Email", userEmail)
-                .checkResult("Gender", setMale)
-                .checkResult("Mobile", userNumber)
+                .checkResult("Student Name", setFirstName + " " + setLastname)
+                .checkResult("Student Email", setUserEmail)
+                .checkResult("Gender", setGender)
+                .checkResult("Mobile", setUserNumber)
                 .checkResult("Date of Birth", dateOfBirth)
                 .checkResult("Subjects", setSubjectValue)
-                .checkResult("Hobbies", setMusic)
+                .checkResult("Hobbies", setHobbies)
                 .checkResult("Picture", uploadPicture)
                 .checkResult("Address", currentAddress)
-                .checkResult("State and City", setSelectState + " " + setSelectCity);
+                .checkResult("State and City", selectState + " " + selectCity);
     }
 }
 

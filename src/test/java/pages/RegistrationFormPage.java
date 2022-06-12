@@ -29,17 +29,17 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage lastName(String value) {
+    public RegistrationFormPage setLastName(String value) {
         $("#lastName").setValue(value);
         return this;
     }
 
-    public RegistrationFormPage userEmail(String value) {
+    public RegistrationFormPage setUserEmail(String value) {
         $("#userEmail").setValue(value);
         return this;
     }
 
-    public RegistrationFormPage userNumber(String value) {
+    public RegistrationFormPage setUserNumber(String value) {
         $("#userNumber").setValue(value);
         return this;
     }
@@ -49,18 +49,18 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage setMale(String value) {
-        $(byText("Male")).click();
+    public RegistrationFormPage setGender(String value) {
+        $(byText(value)).click();
         return this;
     }
 
-    public RegistrationFormPage setMusic(String value) {
-        $(byText("Music")).click();
+    public RegistrationFormPage setHobbies(String value) {
+        $(byText(value)).click();
         return this;
     }
 
     public RegistrationFormPage uploadPicture(String value) {
-        $("#uploadPicture").uploadFile(new File("src/test/resources/img/2.jpg")); // загрузка файла
+        $(value).uploadFile(new File("src/test/resources/img/2.jpg")); // загрузка файла
         return this;
     }
 
@@ -75,17 +75,17 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage setSelectState(String value) {
-        $("#react-select-3-input").val("NCR").pressEnter();
+    public RegistrationFormPage selectState(String value) {
+        $(value).val("NCR").pressEnter();
         return this;
     }
 
-    public RegistrationFormPage setSelectCity(String value) {
-        $("#react-select-4-input").val("Noida").pressEnter();
+    public RegistrationFormPage selectCity(String value) {
+        $(value).val("Noida").pressEnter();
         return this;
     }
 
-    public RegistrationFormPage setSubmit() {
+    public RegistrationFormPage clickSubmit() {
         $("#submit").scrollTo().click();
         return this;
     }
