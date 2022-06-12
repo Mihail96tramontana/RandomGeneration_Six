@@ -8,13 +8,14 @@ import pages.RegistrationFormPage;
 public class HomeWorkFive {
 
 
-    @BeforeAll
+    @BeforeAllrervrrvr
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
     }
 
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
+
 
     @Test
     void successfulTest() {
