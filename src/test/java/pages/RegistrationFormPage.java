@@ -91,7 +91,7 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage checkResult(String key, String value) {
-        ResultsTableComponent.checkResult(key, value);
+        resultsTableComponent.checkResult(key, value);
         return this;
     }
 }

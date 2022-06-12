@@ -16,7 +16,7 @@ public class HomeWorkFive {
         Configuration.browserSize = "1920x1080";
     }
 
-    RegistrationFormPage RegistrationFormPage = new RegistrationFormPage();
+    RegistrationFormPage registrationFormPage = new RegistrationFormPage();
 
     @Test
     void successfulTest() {
@@ -36,10 +36,10 @@ public class HomeWorkFive {
                 dateOfBirth = "10 April,2020";
 
 
-        RegistrationFormPage.openPage();
+        registrationFormPage.openPage();
 
         //шаги
-        RegistrationFormPage.openPage()
+        registrationFormPage.openPage()
         .setFirstName(firstname)
         .lastName(lastname)
         .userEmail(userEmail)
@@ -58,7 +58,7 @@ public class HomeWorkFive {
 
 
         //проверки
-        RegistrationFormPage
+        registrationFormPage
                 .checkResult("Student Name", firstname + " " + lastname)
                 .checkResult("Student Email", userEmail)
                 .checkResult("Gender", setMale)
