@@ -1,11 +1,20 @@
 package domashca_5;
 
 import com.codeborne.selenide.Configuration;
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationFormPage;
 
 public class HomeWorkSix {
+
+    //скрипты для генерации значений
+    Faker faker = new Faker();
+    String firstName = faker.address().firstName();
+    String lastName = faker.address().lastName();
+    String userEmail = faker.internet().emailAddress();
+    String userNumber = faker.phoneNumber().phoneNumber();
+    String currentAddress = faker.address().streetAddressNumber();
 
 
     @BeforeAll
