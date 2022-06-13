@@ -28,12 +28,12 @@ public class HomeWorkSix {
 
     @Test
     void successfulTest() {
-        //объявление переменных
-        String firstname = "Mihail",
-                lastName = "Lubeznow",
-                userEmail = "mihail@mail.ru",
-                userNumber = "1234567890",
-                currentAddress = "Miami",
+        //объявление переменных (часть переменных отключена для работы скриптов генерации данных)
+        String //firstName = "Mihail", отключено
+                //lastName = "Lubeznow", отключено
+                //userEmail = "mihail@mail.ru", отключено
+                //userNumber = "1234567890", отключено
+                //currentAddress = "Miami", отключено
                 gender = "Male",
                 hobbies = "Music",
                 uploadPicture = "2.jpg",
@@ -46,7 +46,7 @@ public class HomeWorkSix {
 
         //шаги
         registrationFormPage.openPage()
-        .setFirstName(firstname)
+        .setFirstName(firstName)
         .setLastName(lastName)
         .setUserEmail(userEmail)
         .setUserNumber(userNumber)
@@ -65,7 +65,7 @@ public class HomeWorkSix {
 
         //проверки
         registrationFormPage
-                .checkResult("Student Name", firstname + " " + lastName)
+                .checkResult("Student Name", firstName + " " + lastName)
                 .checkResult("Student Email", userEmail)
                 .checkResult("Gender", gender)
                 .checkResult("Mobile", userNumber)
