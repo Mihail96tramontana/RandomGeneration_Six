@@ -1,4 +1,4 @@
-package domashca_5;
+package domashca_6;
 
 import com.codeborne.selenide.Configuration;
 import com.github.javafaker.Faker;
@@ -8,12 +8,12 @@ import pages.RegistrationFormPage;
 
 public class HomeWorkSix {
 
-    //скрипты для генерации значений
+    //скрипты для генерации случайных значений
     Faker faker = new Faker();
     String firstName = faker.address().firstName();
     String lastName = faker.address().lastName();
     String userEmail = faker.internet().emailAddress();
-    String userNumber = faker.phoneNumber().phoneNumber();
+    String userNumber = faker.number().digits(10);
     String currentAddress = faker.address().streetAddressNumber();
 
 
